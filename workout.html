@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GreenBite - Workouts</title>
+  <link rel="stylesheet" href="./Style.css">
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>GreenBite</h1>
+    <img src="./Images/Logo.gif" alt="GreenBite Logo">
+    <nav>
+      <a href="./home.html">Home</a>
+      <a href="./recipes.html">Recipes</a>
+      <a href="./calculator.html">Calorie Calculator</a>
+      <a href="./workout.html">Workouts</a>
+      <a href="./mindfulness.html">Mindfulness</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="content">
+    <h2>Workout Generator</h2>
+    <form id="workoutForm">
+      <label>Body Part: 
+        <select id="bodyPart">
+          <option>Arms</option>
+          <option>Legs</option>
+          <option>Full Body</option>
+        </select>
+      </label>
+      <label>Equipment: 
+        <select id="equipment">
+          <option>None</option>
+          <option>Dumbbells</option>
+        </select>
+      </label>
+      <button type="submit">Generate Workout</button>
+    </form>
+    <div id="workoutResult"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 GreenBite. All rights reserved.</p>
+  </footer>
+</body>
+</html>

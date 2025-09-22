@@ -1,0 +1,244 @@
+*{box-sizing:border-box}
+body {
+  margin: 0;
+  font-family: "MV Boli", sans-serif;
+  color: #111;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: url("./Images/background.jpg") center top / cover no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  background: #2e7d32;
+  color: #fff;
+  padding: 5px;
+  text-align: center;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+header img {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+nav {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 1px 120px;
+}
+
+nav a {
+  background: #fff;
+  color: #3fac45;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  font-weight: 700;
+  transition: background 0.25s, color 0.25s;
+}
+
+nav a:hover {
+  background: #bff0c9;
+  color: #fff;
+}
+
+main {
+  flex: 1;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.slider img {
+  width: 80%;
+  max-width: 500px;
+  display: none;
+  border-radius: 8px;
+}
+
+.slider img.active {
+  display: block;
+  margin: 0 auto;
+}
+
+.featured,
+.content {
+  max-width: 1100px;
+  margin: 18px auto;
+  background: rgba(255, 255, 255, 0.96);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+footer {
+  background: #2e7d32;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+}
+
+/* === Recipes Grid === */
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.recipe-item {
+  text-align: center;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.recipe-item:hover {
+  background: #d4f7d4;
+}
+
+.recipe-item h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.recipe-item img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* === Modal Styling === */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #fff;
+  max-width: 700px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  text-align: left;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+.modal-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.modal-content table th,
+.modal-content table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #333;
+}
+
+@media (max-width: 600px) {
+  .slider img {
+    width: 95%;
+    height: auto;
+  }
+  header {
+    font-size: 1.25rem;
+    padding: 16px 5px 16px 50px;
+  }
+  header img {
+    width: 32px;
+    height: 32px;
+    top: 8px;
+    left: 8px;
+  }
+  nav {
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  nav a {
+    padding: 8px 12px;
+    margin: 4px;
+    border-radius: 8px;
+  }
+  .featured,
+  .content {
+    padding: 14px;
+    margin: 12px;
+  }
+}
+
+#recipeList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.recipe-card {
+  text-align: center;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.recipe-card:hover {
+  background: #d4f7d4;
+}
+
+.recipe-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recipe-card h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+}
+
+.recipe-card p {
+  font-size: 14px;
+  color: #555;
+}
